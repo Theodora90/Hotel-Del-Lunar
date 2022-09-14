@@ -1,0 +1,19 @@
+.navbar h2 {
+  font-family: var(--subFont);
+}
+
+.nav-link {
+  color: var(--primaryColor);
+  font-weight: bold;
+  font-family: var(--mainFont);
+}
+
+.active {
+  color: var(--subColor) !important;
+}
+
+@media (max-width: 835px) {
+  .navbar h2 {
+    padding: 1.5rem 0 0 0;
+  }
+}

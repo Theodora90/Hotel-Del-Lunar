@@ -1,0 +1,52 @@
+.hero-img {
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.589) 0%,
+      rgba(0, 0, 0, 0.589) 100%
+    ),
+    url("/src/assets/images/home-hero.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img .action-container h1 {
+  font-family: var(--subFont);
+  color: #fff;
+  text-align: center;
+}
+
+.hero-img .action-container a {
+  font-family: var(--mainFont);
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 1rem 2rem;
+  background: inherit;
+  text-decoration: none;
+  text-align: center;
+}
+
+.home-about {
+  font-family: var(--mainFont);
+  overflow: hidden;
+}
+
+.home-about p {
+  text-align: justify;
+}
+
+.img-card {
+  width: 18rem;
+}
+
+@media (max-width: 835px) {
+  .hero-img {
+    height: 100vh;
+    background-position: center top;
+  }
+}

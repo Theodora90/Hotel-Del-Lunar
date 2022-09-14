@@ -1,0 +1,21 @@
+.container {
+  margin: auto;
+  width: 80%;
+  padding: 1.5rem;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    margin: auto;
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    margin: auto;
+    width: 100%;
+    padding: 0.4rem 1.5rem;
+  }
+}

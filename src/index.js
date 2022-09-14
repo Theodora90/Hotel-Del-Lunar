@@ -6,8 +6,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 
 import App from "./App";
-import Home from "./Components/Pages/Home/home";
-import Insight from "./Components/Pages/Insights/insight";
+import Home from "./components/PAGES/home/home";
+import Insight from "./components/PAGES/insights/insights";
+import Rooms from "./components/PAGES/rooms/rooms";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +17,7 @@ root.render(
       <Route path="/" element={<App />}>
         <Route path="/" element={<Home />} />
         <Route path="insight" element={<Insight />} />
+        <Route path="rooms" element={<Rooms />} />
       </Route>
     </Routes>
   </BrowserRouter>
