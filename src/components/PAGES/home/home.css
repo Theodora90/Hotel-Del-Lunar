@@ -19,16 +19,23 @@
   font-family: var(--subFont);
   color: #fff;
   text-align: center;
+  font-weight: 500;
 }
 
 .hero-img .action-container a {
   font-family: var(--mainFont);
-  color: #fff;
+  color: var(--mainColor);
   border: 2px solid #fff;
   padding: 1rem 2rem;
-  background: inherit;
+  background: #fff;
   text-decoration: none;
   text-align: center;
+}
+
+.hero-img .action-container a:hover {
+  background: inherit;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 .home-about {
@@ -41,7 +48,12 @@
 }
 
 .img-card {
-  width: 18rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.107),
+    0 6px 20px 0 rgba(0, 0, 0, 0.123);
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 @media (max-width: 835px) {

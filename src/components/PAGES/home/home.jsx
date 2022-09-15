@@ -3,11 +3,49 @@ import "./home.css";
 import { Link } from "react-router-dom";
 
 import Container from "../../UI/container/container";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+
 import AboutImage from "../../../assets/images/about-image.jpeg";
+// import one from "../../../assets/images/room-one.jpeg"
 
 const Home = () => {
-  return (
-    <div>
+  const rooms = [
+    {
+      id: 1,
+        img: "../../../assets/images/about-image.jpg",
+      },
+      {
+        id: 2,
+        img: "../../../assets/images/about-image.jpg",
+      },
+      {
+        id: 3,
+        img: "../../../assets/images/about-image.jpg",
+      },
+      {
+        id: 4,
+        img: "../../../assets/images/about-image.jpg",
+      },
+      {
+        id: 5,
+        img: "../../../assets/images/room-one.jpg",
+      },
+      {
+        id: 6,
+        img: "../../../assets/images/about-image.jpg",
+      },
+      {
+        id: 7,
+        img: "../../../assets/images/about-image.jpg",
+      },
+      {
+        id: 8,
+        img: "../../../assets/images/about-image.jpg",
+      },
+    ];
+    return (
+      <div>
       <div className="hero-img">
         <div className="action-container">
           <h1 className="display-2">
@@ -15,7 +53,7 @@ const Home = () => {
             and reconnect
           </h1>
           <div className="text-center pt-5">
-            <Link to="/rooms" target="_blank" rel="noopener noreferrer">
+            <Link to="/rooms" rel="noopener noreferrer">
               Book a reservation
             </Link>
           </div>
@@ -43,12 +81,30 @@ const Home = () => {
               ratione, placeat voluptate deleniti iusto eligendi! Eaque!
             </p>
           </div>
-          <div className="col-lg-5 d-flex align-items-center">
+          <div className="col-lg-5 mx-auto d-flex align-items-center">
             <img src={AboutImage} className="img-fluid" alt="Hotel Lobby" />
           </div>
         </div>
 
-        <section></section>
+        <section>
+          <Splide
+            aria-label="room"
+            options={{
+              //   fixedWidth: "250px",
+              perPage: 3,
+              focus: "center",
+              autoplay: true,
+            }}
+          >
+            {rooms.map((room) => (
+              <SplideSlide key={room.id}>
+                <div className="img-card">
+                  <img src={room.img} className="img-fluid" alt="A Room" />
+                </div>
+              </SplideSlide>
+            ))}
+          </Splide>
+        </section>
       </Container>
     </div>
   );
