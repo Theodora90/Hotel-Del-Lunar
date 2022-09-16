@@ -37,21 +37,16 @@ const Home = () => {
           <div className="col-lg-6 mx-auto mt-4">
             <h3>Hotel Del Lunar</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-              facere adipisci minima architecto porro voluptatibus molestiae ut
-              vel qui tenetur similique veritatis exercitationem sint
-              doloremque, esse possimus? Rem, odio molestiae? Porro natus, sequi
-              reiciendis, accusantium illo veritatis laudantium et odit a omnis
-              enim. Minus amet quidem aperiam earum repellendus facilis
-              quibusdam, nisi corrupti aut eum facere assumenda, modi,
-              necessitatibus natus. Eaque maxime consectetur, nesciunt, vel
-              labore natus explicabo dicta excepturi dolores officiis officia
-              soluta aut quibusdam ipsam dignissimos ex aspernatur ad animi, sit
-              veniam nobis corrupti aliquam voluptate. Debitis, provident.
-              Quidem veniam nihil ullam laboriosam, ex repudiandae ad asperiores
-              quaerat dolor. Esse modi dolores maxime voluptates vitae
-              reprehenderit quod, facere molestias perferendis consequuntur
-              ratione, placeat voluptate deleniti iusto eligendi! Eaque!
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+              saepe voluptatum provident. Veritatis iure ad neque ipsam rerum
+              aut dignissimos ea quidem, laboriosam sed, corrupti, consectetur
+              totam libero porro repellendus.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+              saepe voluptatum provident. Veritatis iure ad neque ipsam rerum
+              aut dignissimos ea quidem, laboriosam sed, corrupti, consectetur
+              totam libero porro repellendus.
             </p>
           </div>
           <div className="col-lg-5 mx-auto d-flex align-items-center">
@@ -80,29 +75,29 @@ const Home = () => {
             ))}
           </Splide>
         </section>
-        <section className="services">
-          <div className="d-md-flex justify-content-between text-center">
-            <div>
+        <section className="services slider-area">
+          <div className="d-md-flex justify-content-between text-center wrapper">
+            <div className="item">
               <RiRestaurant2Line className="service-icon" />
               <h5>Bar & Restaurant</h5>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-            <div>
+            <div className="item">
               <BiSpa className="service-icon" />
               <h5>Spa</h5>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-            <div>
+            <div className="item">
               <FaSwimmingPool className="service-icon" />
               <h5>Pool</h5>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-            <div>
+            <div className="item">
               <CgGym className="service-icon" />
               <h5>Gym</h5>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-            <div>
+            <div className="item">
               <MdLocalLaundryService className="service-icon" />
               <h5>Laundry</h5>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
