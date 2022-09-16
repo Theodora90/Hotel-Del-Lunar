@@ -1,0 +1,47 @@
+footer {
+  background-color: var(--mainColor);
+  color: #fff;
+  padding: 2.5rem 3rem;
+}
+
+footer h2 {
+  font-family: var(--subFont);
+}
+
+footer p {
+  font-family: var(--mainFont);
+  font-size: 0.8rem !important;
+}
+
+footer .nav-link {
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.8rem !important;
+}
+
+.Social-links ul li {
+  list-style-type: none;
+  line-height: 2;
+}
+
+.Social-links ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--mainFont);
+  font-size: 0.8rem !important;
+}
+
+.Social-links .icon {
+  font-size: 1.3rem;
+  margin: 0 10px 0 0;
+}
+
+.copyright {
+  padding: 2rem 0 0 0 !important;
+  text-align: center;
+}
+
+.copyright .brand {
+  font-family: var(--subFont);
+  font-size: large;
+}

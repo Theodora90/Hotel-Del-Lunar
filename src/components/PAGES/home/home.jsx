@@ -3,49 +3,22 @@ import "./home.css";
 import { Link } from "react-router-dom";
 
 import Container from "../../UI/container/container";
+import Footer from "../../UI/footer/footer";
+import AboutImage from "../../../assets/images/about-image.jpeg";
+import rooms from "../../STORE/roomsData.json";
+
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
-import AboutImage from "../../../assets/images/about-image.jpeg";
-// import one from "../../../assets/images/room-one.jpeg"
+import { BiSpa } from "@react-icons/all-files/bi/BiSpa";
+import { RiRestaurant2Line } from "@react-icons/all-files/ri/RiRestaurant2Line";
+import { FaSwimmingPool } from "@react-icons/all-files/fa/FaSwimmingPool";
+import { CgGym } from "@react-icons/all-files/cg/CgGym";
+import { MdLocalLaundryService } from "@react-icons/all-files/md/MdLocalLaundryService";
 
 const Home = () => {
-  const rooms = [
-    {
-      id: 1,
-        img: "../../../assets/images/about-image.jpg",
-      },
-      {
-        id: 2,
-        img: "../../../assets/images/about-image.jpg",
-      },
-      {
-        id: 3,
-        img: "../../../assets/images/about-image.jpg",
-      },
-      {
-        id: 4,
-        img: "../../../assets/images/about-image.jpg",
-      },
-      {
-        id: 5,
-        img: "../../../assets/images/room-one.jpg",
-      },
-      {
-        id: 6,
-        img: "../../../assets/images/about-image.jpg",
-      },
-      {
-        id: 7,
-        img: "../../../assets/images/about-image.jpg",
-      },
-      {
-        id: 8,
-        img: "../../../assets/images/about-image.jpg",
-      },
-    ];
-    return (
-      <div>
+  return (
+    <div>
       <div className="hero-img">
         <div className="action-container">
           <h1 className="display-2">
@@ -86,14 +59,16 @@ const Home = () => {
           </div>
         </div>
 
-        <section>
+        <section className="mt-5 rooms">
+          <h2 className="text-center">Rooms & Services</h2>
           <Splide
             aria-label="room"
             options={{
-              //   fixedWidth: "250px",
-              perPage: 3,
+              fixedWidth: "400px",
+              // perPage: 3,
               focus: "center",
               autoplay: true,
+              type: "loop",
             }}
           >
             {rooms.map((room) => (
@@ -105,7 +80,37 @@ const Home = () => {
             ))}
           </Splide>
         </section>
+        <section className="services">
+          <div className="d-md-flex justify-content-between text-center">
+            <div>
+              <RiRestaurant2Line className="service-icon" />
+              <h5>Bar & Restaurant</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div>
+              <BiSpa className="service-icon" />
+              <h5>Spa</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div>
+              <FaSwimmingPool className="service-icon" />
+              <h5>Pool</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div>
+              <CgGym className="service-icon" />
+              <h5>Gym</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div>
+              <MdLocalLaundryService className="service-icon" />
+              <h5>Laundry</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </section>
       </Container>
+      <Footer />
     </div>
   );
 };

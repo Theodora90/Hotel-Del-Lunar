@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Sunshine",
+    "img": "https://res.cloudinary.com/ddxyph5so/image/upload/v1663271119/Ankara-village-products/Hotel-beds/room-eight_tzow3v.jpg",
+    "price": 1200,
+    "available": "Booked"
+  },
+  {
+    "id": 2,
+    "img": "https://res.cloudinary.com/ddxyph5so/image/upload/v1663271126/Ankara-village-products/Hotel-beds/room-three_zgvicv.jpg",
+    "price": 1000,
+    "available": "Available"
+  },
+  {
+    "id": 3,
+    "img": "https://res.cloudinary.com/ddxyph5so/image/upload/v1663300904/Ankara-village-products/Hotel-beds/AdobeStock_276819012_Preview_hh4yzy.jpg",
+    "price": 1500,
+    "available": "Booked"
+  },
+  {
+    "id": 4,
+    "img": "https://res.cloudinary.com/ddxyph5so/image/upload/v1663271122/Ankara-village-products/Hotel-beds/room-two_gu3qr3.jpg",
+    "price": 1700,
+    "available": "Available"
+  },
+  {
+    "id": 5,
+    "img": "https://res.cloudinary.com/ddxyph5so/image/upload/v1663271119/Ankara-village-products/Hotel-beds/room-eight_tzow3v.jpg",
+    "price": 2000,
+    "available": "Available"
+  },
+  {
+    "id": 6,
+    "img": "https://res.cloudinary.com/ddxyph5so/image/upload/v1663300903/Ankara-village-products/Hotel-beds/AdobeStock_295215381_Preview_svwdyb.jpg",
+    "price": 5000,
+    "available": "Booked"
+  },
+  {
+    "id": 7,
+    "img": "https://res.cloudinary.com/ddxyph5so/image/upload/v1663271119/Ankara-village-products/Hotel-beds/room-four_qahuki.jpg",
+    "price": 4000,
+    "available": "Booked"
+  },
+  {
+    "id": 8,
+    "img": "https://res.cloudinary.com/ddxyph5so/image/upload/v1663271118/Ankara-village-products/Hotel-beds/room-five_phb5wo.jpg",
+    "price": 1200,
+    "available": "Available"
+  }
+]

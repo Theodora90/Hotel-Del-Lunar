@@ -47,18 +47,48 @@
   text-align: justify;
 }
 
+.services,
+.rooms {
+  font-family: var(--mainFont);
+}
+
 .img-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.107),
     0 6px 20px 0 rgba(0, 0, 0, 0.123);
   border-radius: 8px;
-  border: 1px solid black;
-  padding: 1rem;
+  padding: 0.3rem;
   margin: 1rem;
+}
+
+.splide {
+  padding: 0 1.9rem;
+}
+
+.services {
+  padding: 5rem 1.4rem;
+}
+
+.services .d-md-flex > div {
+  margin: 0 0.6rem !important;
+}
+
+.service-icon {
+  color: var(--subColor);
+  font-size: 1.8rem;
+}
+
+.splide__pagination {
+  display: none !important;
 }
 
 @media (max-width: 835px) {
   .hero-img {
     height: 100vh;
     background-position: center top;
+  }
+
+  .splide,
+  .services {
+    padding: 0;
   }
 }

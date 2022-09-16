@@ -9,6 +9,8 @@ import App from "./App";
 import Home from "./components/PAGES/home/home";
 import Insight from "./components/PAGES/insights/insights";
 import Rooms from "./components/PAGES/rooms/rooms";
+import Facilities from "./components/PAGES/facilities/facilities";
+import Contact from "./components/PAGES/contact/contact";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,6 +20,8 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="insight" element={<Insight />} />
         <Route path="rooms" element={<Rooms />} />
+        <Route path="facilities" element={<Facilities />} />
+        <Route path="contact" element={<Contact />} />
       </Route>
     </Routes>
   </BrowserRouter>
