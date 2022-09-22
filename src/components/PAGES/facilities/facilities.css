@@ -1,0 +1,25 @@
+.facilities-hero {
+  background-image: url("/src/assets/images/image-five.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.384);
+}
+
+.facilities-hero .text-container h1 {
+  font-family: var(--subFont);
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+}
+
+.facilities {
+  font-family: var(--mainFont);
+  padding: 0 0 4rem 0;
+}

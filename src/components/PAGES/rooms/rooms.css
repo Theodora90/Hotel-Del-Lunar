@@ -21,11 +21,19 @@
 
 .book-room {
   font-family: var(--mainFont);
-  padding: 2.5rem 0 4rem 0;
+  padding: 0 0 4rem 0;
 }
 
 .book-room button {
   padding: 0.5rem 2rem;
   background-color: var(--subColor);
   color: #fff;
+  border: 1px solid var(--subColor);
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+.book-room button:hover {
+  background-color: inherit;
+  color: var(--subColor);
 }

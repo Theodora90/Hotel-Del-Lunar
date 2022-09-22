@@ -16,7 +16,7 @@ const Footer = () => {
     <footer>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-3">
+          <div className="col-md-3">
             <Link className="navbar-brand" to="/">
               <h2>Hotel Del Lunar</h2>
             </Link>
@@ -25,7 +25,7 @@ const Footer = () => {
               rejuvenate, and reconnect
             </p>
           </div>
-          <div className="col-lg-3">
+          <div className="col-md-3">
             <ul className="navbar-nav mb-lg-0">
               <li className="nav-item px-3">
                 <Link className="nav-link" aria-current="page" to="/">
@@ -54,7 +54,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-lg-3">
+          <div className="col-md-3">
             <ul className="navbar-nav mb-lg-0">
               <li className="nav-item px-3">
                 <Link className="nav-link" aria-current="page" to="/">
@@ -83,7 +83,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-lg-3">
+          <div className="col-md-3">
             <div className="Social-links">
               <ul>
                 <li>

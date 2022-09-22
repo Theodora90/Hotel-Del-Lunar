@@ -36,9 +36,9 @@
 }
 
 .our-staffs img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
 }
 .our-staffs h4 {
   padding: 2rem 0;
