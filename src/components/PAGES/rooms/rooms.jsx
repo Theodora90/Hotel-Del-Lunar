@@ -1,17 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./rooms.css";
 
 import Container from "../../UI/container/container";
-import bookingData from "../../STORE/bookingData.json";
 import Footer from "../../UI/footer/footer";
 // import Pagination from "../../UI/pagination/pagination";
 import Bookings from "../../UI/forms/booking-form";
 import Currency from "../../UI/forms/currency-form";
+import axios from "axios";
 
 const Rooms = (props) => {
   const [roomId, setRoomId] = useState();
   const [roomName, setRoomName] = useState();
   const [roomPrice, setRoomPrice] = useState();
+  const [rooms, setRoomDetails] = useState([]);
+  const [symbols, setSymbol] = useState([]);
+
+  useEffect(() => {
+    try {
+      const url = `https://633af58be02b9b64c61be56a.mockapi.io/Rooms`;
+      axios.get(url).then((response) => {
+        setRoomDetails(response.data);
+      });
+    } catch (error) {}
+
+    try {
+      const url = `https://633af58be02b9b64c61be56a.mockapi.io/Currency`;
+      axios.get(url).then((response) => {
+        setSymbol(response.data);
+      });
+    } catch (error) {}
+  }, []);
 
   const handleThousandSeparator = (price) => {
     const currency = "$";
@@ -49,6 +67,11 @@ const Rooms = (props) => {
     setRoomPrice(price);
   };
 
+  const checkLifting = (e) => {
+    e.preventDefault();
+    console.log("i am practicing lifitng state");
+  };
+
   return (
     <div>
       <div className="room-hero">
@@ -60,10 +83,10 @@ const Rooms = (props) => {
         </div>
       </div>
       <Container>
-        <Currency />
+        <Currency onClick={checkLifting} data={symbols} price={rooms} />
         <Bookings id={roomId} name={roomName} price={roomPrice} />
         <div className="row book-room">
-          {bookingData.map((room) => (
+          {rooms.map((room) => (
             <div className="col-md-4 mx-auto mt-5" key={room.id}>
               <div className="card border-0 shadow">
                 <img src={room.img} className="img-fluid" alt="Room" />

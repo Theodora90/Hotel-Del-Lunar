@@ -34,6 +34,8 @@
 }
 
 .book-room button:hover {
+  transform: ease-out;
+  transition: 2s;
   background-color: inherit;
   color: var(--subColor);
 }
