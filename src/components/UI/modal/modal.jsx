@@ -1,4 +1,5 @@
 import React from "react";
+import "./modal.css";
 
 const Modal = (props) => {
   return (
@@ -13,7 +14,7 @@ const Modal = (props) => {
         <div className="modal-content">
           <div className="modal-header border-0">
             <h4 className="modal-title text-center" id="exampleModalLabel">
-              Bookings
+              Booking and Reservations
             </h4>
             <button
               type="button"
@@ -23,15 +24,6 @@ const Modal = (props) => {
             ></button>
           </div>
           <div className="modal-body">{props.children}</div>
-          <div className="modal-footer">
-            <button
-              type="button"
-              className="btn btn-warning"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,31 @@
+form button {
+  padding: 0.5rem 2rem;
+  background-color: var(--subColor);
+  color: #fff;
+  border: 1px solid var(--subColor);
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+form button:hover {
+  transform: ease-out;
+  transition: 2s;
+  background-color: inherit;
+  color: var(--subColor);
+}
+
+.triangle-mark {
+  content: "";
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  transform-origin: left bottom;
+  border-radius: 0;
+  width: 8px;
+  height: 8px;
+  position: relative;
+  top: -2px;
+  right: 1px;
+}

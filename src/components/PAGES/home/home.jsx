@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
 import { Link } from "react-router-dom";
 
 import Container from "../../UI/container/container";
 import Footer from "../../UI/footer/footer";
 import AboutImage from "../../../assets/images/about-image.jpeg";
-import rooms from "../../STORE/roomsData.json";
 
+import axios from "axios";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
@@ -17,6 +17,16 @@ import { CgGym } from "@react-icons/all-files/cg/CgGym";
 import { MdLocalLaundryService } from "@react-icons/all-files/md/MdLocalLaundryService";
 
 const Home = () => {
+  const [rooms, setRoomDetails] = useState([]);
+
+  useEffect(() => {
+    try {
+      const url = `https://633af58be02b9b64c61be56a.mockapi.io/Rooms`;
+      axios.get(url).then((response) => {
+        setRoomDetails(response.data);
+      });
+    } catch (error) {}
+  }, []);
   return (
     <div>
       <div className="hero-img">

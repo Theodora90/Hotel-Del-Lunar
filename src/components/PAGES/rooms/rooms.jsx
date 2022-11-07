@@ -5,7 +5,6 @@ import Container from "../../UI/container/container";
 import Footer from "../../UI/footer/footer";
 // import Pagination from "../../UI/pagination/pagination";
 import Bookings from "../../UI/forms/booking-form";
-import Currency from "../../UI/forms/currency-form";
 import axios from "axios";
 
 const Rooms = (props) => {
@@ -13,20 +12,12 @@ const Rooms = (props) => {
   const [roomName, setRoomName] = useState();
   const [roomPrice, setRoomPrice] = useState();
   const [rooms, setRoomDetails] = useState([]);
-  const [symbols, setSymbol] = useState([]);
 
   useEffect(() => {
     try {
       const url = `https://633af58be02b9b64c61be56a.mockapi.io/Rooms`;
       axios.get(url).then((response) => {
         setRoomDetails(response.data);
-      });
-    } catch (error) {}
-
-    try {
-      const url = `https://633af58be02b9b64c61be56a.mockapi.io/Currency`;
-      axios.get(url).then((response) => {
-        setSymbol(response.data);
       });
     } catch (error) {}
   }, []);
@@ -38,38 +29,10 @@ const Rooms = (props) => {
     );
   };
 
-  const handleDefaultCurrency = () => {
-    var myHeaders = new Headers();
-    myHeaders.append("apikey", "CcqkvcIb1iisj0nIxTscjUrRHQ7lqkIK");
-
-    var requestOptions = {
-      method: "GET",
-      redirect: "follow",
-      headers: myHeaders,
-    };
-
-    var one = "EUR";
-    var two = "GBP";
-    var money = "25";
-
-    fetch(
-      `https://api.apilayer.com/exchangerates_data/convert?to=${one}&from=${two}&amount=${money}`,
-      requestOptions
-    )
-      .then((response) => response.text())
-      .then((result) => console.log(result))
-      .catch((error) => console.log("error", error));
-  };
-
   const handleBookingData = (id, name, price) => {
     setRoomId(id);
     setRoomName(name);
     setRoomPrice(price);
-  };
-
-  const checkLifting = (e) => {
-    e.preventDefault();
-    console.log("i am practicing lifitng state");
   };
 
   return (
@@ -83,7 +46,6 @@ const Rooms = (props) => {
         </div>
       </div>
       <Container>
-        <Currency onClick={checkLifting} data={symbols} price={rooms} />
         <Bookings id={roomId} name={roomName} price={roomPrice} />
         <div className="row book-room">
           {rooms.map((room) => (

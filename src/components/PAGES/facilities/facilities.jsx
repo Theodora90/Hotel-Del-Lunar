@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./facilities.css";
 
 import Container from "../../UI/container/container";
 import Footer from "../../UI/footer/footer";
-import facilities from "../../STORE/facilities.json";
+
+import axios from "axios";
 
 const Facilities = () => {
+  const [facilities, setFacilities] = useState([]);
+
+  useEffect(() => {
+    try {
+      const url = `https://633af58be02b9b64c61be56a.mockapi.io/Facilities`;
+      axios.get(url).then((response) => {
+        setFacilities(response.data);
+      });
+    } catch (error) {}
+  }, []);
+
   return (
     <div>
       <div className="facilities-hero">
